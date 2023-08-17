@@ -24,14 +24,15 @@ public class FindingList {
         System.out.println("Which of the fossils would you like to learn more about? (Bird, Fish, or Tooth)");
         Scanner input = new Scanner(System.in);
         String fossilChoice = input.nextLine();
+
         if (fossilChoice.equalsIgnoreCase("Bird")) {
-            System.out.println(fossilChoice + " fossil " + fossils.get(fossilChoice));
+            System.out.println(fossilChoice + " fossil " + fossils.get("Bird Fossil"));
         } else if (fossilChoice.equalsIgnoreCase("Fish")) {
-            System.out.println(fossilChoice + " fossil " + fossils.get(fossilChoice));
+            System.out.println(fossilChoice + " fossil " + fossils.get("Fish Fossil"));
         } else if (fossilChoice.equalsIgnoreCase("Tooth")) {
-            System.out.println(fossilChoice + " fossil " + fossils.get(fossilChoice));
+            System.out.println(fossilChoice + " fossil " + fossils.get("Tooth Fossil"));
         } else {
-            System.out.println("No fossil found by that name");
+            System.out.println("Invalid choice.");
         }
 
         Thread.sleep(700);
@@ -40,13 +41,20 @@ public class FindingList {
         supplies.add("Shovel");
         supplies.add("Mindflayer parasite remover");
 
-        supplies.remove("Shovel");
+        Iterator<String> itr = supplies.iterator();
 
-        Iterator itr = supplies.iterator();
-
+        System.out.println("Supplies before expedition");
         while(itr.hasNext()){
             System.out.println(itr.next());
         }
-    }
 
+        supplies.remove("Shovel");
+
+        Iterator<String> afterExpeditionItr = supplies.iterator();
+
+        System.out.println("Supplies after expedition");
+        while(afterExpeditionItr.hasNext()){
+            System.out.println(afterExpeditionItr.next());
+        }
+    }
 }

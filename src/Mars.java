@@ -20,6 +20,7 @@ public class Mars {public static void main(String[] args) throws InterruptedExce
     }
     new GuessingGame();
     new MarsExpedition();
+    new FindingList();
 }
 
     public static boolean landingCheck(int minutesLeft) throws InterruptedException {
