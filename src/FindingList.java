@@ -21,18 +21,16 @@ public class FindingList {
         fossils.put("Tooth Fossil", "The tooth from an unknown fossil");
         System.out.println("Fossil data downloaded.");
 
-        System.out.println("Which of the fossils would you like to learn more about? (Bird, Fish, or Tooth)");
+        System.out.println("Which of the fossils would you like to learn more about? (Bird Fossil, Fish Fossil, or Tooth Fossil, spelling and spacing are important.)");
         Scanner input = new Scanner(System.in);
         String fossilChoice = input.nextLine();
 
-        if (fossilChoice.equalsIgnoreCase("Bird")) {
-            System.out.println(fossilChoice + " fossil " + fossils.get("Bird Fossil"));
-        } else if (fossilChoice.equalsIgnoreCase("Fish")) {
-            System.out.println(fossilChoice + " fossil " + fossils.get("Fish Fossil"));
-        } else if (fossilChoice.equalsIgnoreCase("Tooth")) {
-            System.out.println(fossilChoice + " fossil " + fossils.get("Tooth Fossil"));
-        } else {
-            System.out.println("Invalid choice.");
+        if (fossilChoice.equalsIgnoreCase("Bird Fossil")) {
+            System.out.println(fossilChoice + "\n Description: " + fossils.get(fossilChoice));
+        } else if (fossilChoice.equalsIgnoreCase("Fish Fossil")) {
+            System.out.println(fossilChoice + "\n Description: " + fossils.get(fossilChoice));
+        } else if (fossilChoice.equalsIgnoreCase("Tooth Fossil")) {
+            System.out.println(fossilChoice + "\n Description: " + fossils.get(fossilChoice));
         }
 
         Thread.sleep(700);
